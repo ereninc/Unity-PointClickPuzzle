@@ -1,0 +1,55 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="height: 100%; width: auto; flex-direction: row;">
+        <ui:VisualElement style="width: 25%; height: 100%;">
+            <ui:ScrollView show-horizontal-scroller="false" show-vertical-scroller="false" style="height: 100%; opacity: 1; border-left-color: rgb(89, 89, 89); border-right-color: rgb(89, 89, 89); border-top-color: rgb(89, 89, 89); border-bottom-color: rgb(89, 89, 89); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;">
+                <ui:Button text="Material Creator" display-tooltip-when-elided="true" name="btnMaterialCreateView" />
+                <ui:Button text="Model Controller" display-tooltip-when-elided="true" name="btnMaterialSetView" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 75%;">
+            <ui:VisualElement name="MaterialCreateView" style="width: 100%; border-left-color: rgb(89, 89, 89); border-right-color: rgb(89, 89, 89); border-top-color: rgb(89, 89, 89); border-bottom-color: rgb(89, 89, 89); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; height: 100%; padding-left: 3%; padding-right: 3%; padding-top: 3%; padding-bottom: 3%; display: flex;">
+                <ui:VisualElement name="Textures" style="margin-bottom: 5px; height: 30%; border-bottom-width: 2px; border-left-color: rgb(89, 89, 89); border-right-color: rgb(89, 89, 89); border-top-color: rgb(89, 89, 89); border-bottom-color: rgb(89, 89, 89);">
+                    <ui:Label text="Textures" display-tooltip-when-elided="true" style="font-size: 15px; -unity-text-align: upper-center;" />
+                    <ui:ListView focusable="false" name="texturesList" selection-type="Single" show-alternating-row-backgrounds="None" show-bound-collection-size="true" style="margin-bottom: 1px; height: -7px;" />
+                    <ui:VisualElement name="TextureSample" style="height: 40px; flex-direction: row; margin-bottom: 3px;">
+                        <uie:ObjectField label="Texture Name" name="texField" tooltip="Selected Texture" style="flex-direction: column; width: 49%; padding-left: 5px; padding-right: 5px;" />
+                        <uie:ObjectField label="Shader Name" name="shaderField" tooltip="Select to Material Shader" style="flex-direction: column; width: 49%; padding-left: 5px; padding-right: 5px;" />
+                    </ui:VisualElement>
+                    <ui:Label text="There is no selected textures" display-tooltip-when-elided="true" name="lblEmptyChilds" />
+                </ui:VisualElement>
+                <ui:VisualElement name="MaterialsSetting" style="margin-bottom: 5px; padding-bottom: 3px; border-bottom-width: 2px; border-left-color: rgb(89, 89, 89); border-right-color: rgb(89, 89, 89); border-top-color: rgb(89, 89, 89); border-bottom-color: rgb(89, 89, 89);">
+                    <uie:ObjectField label="Set Shaders to All Materials" name="allShaderField" style="flex-direction: column;" />
+                    <ui:Button text="Set Shader" display-tooltip-when-elided="true" name="btnSetAllShader" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CreateView" style="margin-bottom: 5px;">
+                    <ui:Label text="Path" display-tooltip-when-elided="true" style="margin-left: 1%;" />
+                    <ui:TextField picking-mode="Ignore" label="Assets/" value="GameAssets/Materials" text="GameAssets/Materials" name="txtMatSavePath" />
+                    <ui:Button text="Create Materials" display-tooltip-when-elided="true" name="btnCreateMaterials" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="MaterialSetView" style="display: none; visibility: hidden; width: 100%; height: 100%;">
+                <ui:ScrollView style="margin-bottom: 0; height: 50%;">
+                    <ui:VisualElement name="modelViews" text="Renderers" style="width: 100%; height: 100%; display: flex;">
+                        <ui:Label text="Renderers" display-tooltip-when-elided="true" style="font-size: 15px; -unity-text-align: upper-center; visibility: hidden; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 0; height: 0;" />
+                        <ui:ListView focusable="true" name="rendererList" horizontal-scrolling="false" style="width: 100%; height: 100%; display: flex; overflow: visible; margin-bottom: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding-left: 0; padding-right: 0; padding-top: 0;" />
+                        <ui:VisualElement name="ModelSample" style="display: none; visibility: hidden; width: 100%; height: 100%;">
+                            <uie:ObjectField label="Used Material" name="usedMaterial" style="margin-bottom: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; padding-left: 0; padding-right: 0; padding-top: 0; flex-direction: column;" />
+                            <ui:Foldout text="Renderers" name="FoldOut" value="false" style="height: 100%;">
+                                <ui:VisualElement name="RendererSample" style="flex-direction: row;">
+                                    <uie:ObjectField label="Model Name" name="rendererField" />
+                                    <ui:Button text="Select" display-tooltip-when-elided="true" name="btnSelectRenderer" />
+                                </ui:VisualElement>
+                                <ui:ListView focusable="true" name="rendersParent" style="height: 50px;" />
+                            </ui:Foldout>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:Label text="There is no renderers" display-tooltip-when-elided="true" name="lblEmptyRenderers" style="visibility: hidden; width: 100%; height: 50%; padding-bottom: 0; margin-bottom: 0;" />
+                <ui:VisualElement name="MaterialSetButtons" style="justify-content: center; flex-direction: column; width: 100%; height: auto;">
+                    <ui:Button text="Find Material" display-tooltip-when-elided="true" name="btnFindMaterials" style="display: none; align-items: center;" />
+                    <ui:Button text="Update Material" display-tooltip-when-elided="true" name="btnUpdateModel" style="display: none; align-items: center; justify-content: center; margin-bottom: 0; padding-bottom: 1px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
