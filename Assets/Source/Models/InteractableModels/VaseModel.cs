@@ -7,7 +7,7 @@ public class VaseModel : InteractableBaseModel
     public override void Initialize()
     {
         base.Initialize();
-        onSpawn();
+        OnSpawn(InteractableTypes.Vase);
     }
 
     public override void OnInteract()
@@ -15,8 +15,9 @@ public class VaseModel : InteractableBaseModel
         base.OnInteract();
     }
 
-    private void onSpawn()
+    public override void OnClickEnd()
     {
-        InteractableType = InteractableTypes.Vase;
+        base.OnClickEnd();
+        Debug.Log("VASE WENT WET");
     }
 }

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class LevelModel 
+public class LevelModel : ScriptableObject
 {
-
+    public List<LevelDataModel> LevelDatas;
 }

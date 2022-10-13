@@ -45,12 +45,12 @@ public enum Languages
     rus,
     por
 }
-public enum InteractableTypes 
+public enum InteractableTypes
 {
-    Vase,
-    Blackboard,
     Pen,
+    Blackboard,
     Cup,
-    TrashBin,
-    Drinker
+    Drinker,
+    Vase,
+    TrashBin
 }

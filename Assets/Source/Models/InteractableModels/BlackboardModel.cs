@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BlackboardModel : InteractableBaseModel
 {
+    [SerializeField] private BlackboardVisualModel blackboardVisual;
+
     public override void Initialize()
     {
         base.Initialize();
-        onSpawn();
+        OnSpawn(InteractableTypes.Blackboard);
     }
 
     public override void OnInteract()
@@ -15,8 +17,9 @@ public class BlackboardModel : InteractableBaseModel
         base.OnInteract();
     }
 
-    private void onSpawn()
+    public override void OnClickEnd()
     {
-        InteractableType = InteractableTypes.Blackboard;
+        blackboardVisual.OnBlackboardClick();
+        base.OnClickEnd();
     }
 }

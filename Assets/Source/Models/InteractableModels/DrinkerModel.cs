@@ -7,16 +7,16 @@ public class DrinkerModel : InteractableBaseModel
     public override void Initialize()
     {
         base.Initialize();
-        onSpawn();
+        OnSpawn(InteractableTypes.Drinker);
     }
 
     public override void OnInteract()
     {
         base.OnInteract();
     }
-
-    private void onSpawn()
+    public override void OnClickEnd()
     {
-        InteractableType = InteractableTypes.Drinker;
+        base.OnClickEnd();
+        Debug.Log("DRINKER aaaaa");
     }
 }

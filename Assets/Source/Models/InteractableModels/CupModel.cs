@@ -7,7 +7,7 @@ public class CupModel : InteractableBaseModel
     public override void Initialize()
     {
         base.Initialize();
-        onSpawn();
+        OnSpawn(InteractableTypes.Cup);
     }
 
     public override void OnInteract()
@@ -15,8 +15,9 @@ public class CupModel : InteractableBaseModel
         base.OnInteract();
     }
 
-    private void onSpawn()
+    public override void OnClickEnd()
     {
-        InteractableType = InteractableTypes.Cup;
+        Debug.Log("Water filled");
+        base.OnClickEnd();
     }
 }

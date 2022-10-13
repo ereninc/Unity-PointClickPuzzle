@@ -4,66 +4,29 @@ using UnityEngine;
 
 public class InteractableController : ControllerBaseModel
 {
-    [SerializeField] private PointerController pointerController;
-    public InteractableBaseModel OnInteractObject, OnDropInteractObject;
-    private RaycastHit hit;
-    private Ray ray;
+    [SerializeField] private List<InteractableBaseModel> interactables;
 
     public override void Initialize()
     {
         base.Initialize();
+        setInteractables();
     }
 
-    public override void ControllerUpdate(GameStates currentState)
+    public bool CheckCondition(InteractableBaseModel point, InteractableBaseModel click, LevelModel activeLevel, int stage) 
     {
-        base.ControllerUpdate(currentState);
-        if (currentState == GameStates.Game)
+        if (point.InteractableType == activeLevel.LevelDatas[stage].PointObject && click.InteractableType == activeLevel.LevelDatas[stage].ClickObject)
         {
-            pointerController.ControllerUpdate();
+            click.OnClickEnd();
+            return true;
         }
+        return false;
     }
 
-    public void OnPointerDown() 
+    private void setInteractables() 
     {
-        OnDropInteractObject = null;
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        for (int i = 0; i < interactables.Count; i++)
         {
-            if (OnInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
-            {
-                OnInteractObject.OnInteract();
-            }
+            interactables[i].Initialize();
         }
-    }
-
-    public void OnPointer()
-    {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (OnInteractObject == null)
-            {
-                if (OnInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
-                {
-                    OnInteractObject.OnInteract();
-                }
-            }
-            else
-            {
-                if (OnDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
-                {
-                    if (OnInteractObject != OnDropInteractObject)
-                    {
-                        OnDropInteractObject.OnInteract();
-                    }
-                }
-            }
-        }
-    }
-
-    public void OnPointerUp()
-    {
-        OnDropInteractObject = null;
-        OnInteractObject = null;
     }
 }

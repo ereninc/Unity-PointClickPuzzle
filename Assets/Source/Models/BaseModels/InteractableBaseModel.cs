@@ -11,8 +11,18 @@ public class InteractableBaseModel : ObjectModel, IInteractable
         Interact();
     }
 
+    public virtual void OnClickEnd() 
+    {
+
+    }
+
     public void Interact()
     {
-        Debug.Log(transform.name);
+
+    }
+
+    public void OnSpawn(InteractableTypes type)
+    {
+        InteractableType = type;
     }
 }

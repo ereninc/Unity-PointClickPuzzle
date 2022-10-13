@@ -7,7 +7,7 @@ public class PenModel : InteractableBaseModel
     public override void Initialize()
     {
         base.Initialize();
-        onSpawn();
+        OnSpawn(InteractableTypes.Pen);
     }
 
     public override void OnInteract()
@@ -15,8 +15,9 @@ public class PenModel : InteractableBaseModel
         base.OnInteract();
     }
 
-    private void onSpawn()
+    public override void OnClickEnd()
     {
-        InteractableType = InteractableTypes.Pen;
+        base.OnClickEnd();
+        Debug.Log("PEN PAINTED");
     }
 }
