@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CupModel : InteractableBaseModel
 {
+    [SerializeField] private CupVisualModel cupVisualModel;
+    private int interactIndex;
+
     public override void Initialize()
     {
         base.Initialize();
         OnSpawn(InteractableTypes.Cup);
+        interactIndex = 0;
     }
 
     public override void OnInteract()
@@ -17,7 +21,26 @@ public class CupModel : InteractableBaseModel
 
     public override void OnClickEnd()
     {
-        Debug.Log("Water filled");
+        setEvent();
+        interactIndex++;
         base.OnClickEnd();
+    }
+
+    private void setEvent()
+    {
+        switch (interactIndex)
+        {
+            case 0:
+                cupVisualModel.OnCupClick(true);
+                break;
+            case 1:
+                cupVisualModel.OnCupClick(false);
+                break;
+            case 2:
+                this.SetActiveGameObject(false);
+                break;
+            default:
+                break;
+        }
     }
 }

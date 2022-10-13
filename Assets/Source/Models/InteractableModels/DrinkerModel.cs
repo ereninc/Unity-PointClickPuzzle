@@ -14,6 +14,7 @@ public class DrinkerModel : InteractableBaseModel
     {
         base.OnInteract();
     }
+
     public override void OnClickEnd()
     {
         base.OnClickEnd();

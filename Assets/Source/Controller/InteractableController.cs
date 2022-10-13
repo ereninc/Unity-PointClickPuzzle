@@ -16,6 +16,7 @@ public class InteractableController : ControllerBaseModel
     {
         if (point.InteractableType == activeLevel.LevelDatas[stage].PointObject && click.InteractableType == activeLevel.LevelDatas[stage].ClickObject)
         {
+            point.OnClickEnd();
             click.OnClickEnd();
             return true;
         }
