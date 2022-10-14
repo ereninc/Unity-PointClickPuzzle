@@ -14,10 +14,4 @@ public class PenModel : InteractableBaseModel
     {
         base.OnInteract();
     }
-
-    public override void OnClickEnd()
-    {
-
-        base.OnClickEnd();
-    }
 }

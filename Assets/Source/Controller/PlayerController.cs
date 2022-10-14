@@ -6,17 +6,13 @@ public class PlayerController : ControllerBaseModel
 {
     [SerializeField] private PointerController pointerController;
     [SerializeField] private InteractableController interactableController;
-    private InteractableBaseModel onInteractObject, onDropInteractObject;
-    private LevelModel activeLevel;
-    private int stage;
+    public InteractableBaseModel onInteractObject, onDropInteractObject;
     private RaycastHit hit;
     private Ray ray;
 
     public override void Initialize()
     {
         base.Initialize();
-        stage = 0;
-        activeLevel = LevelController.Instance.ActiveLevel;
     }
 
     public override void ControllerUpdate(GameStates currentState)
@@ -28,15 +24,19 @@ public class PlayerController : ControllerBaseModel
         }
     }
 
-    public void OnPointerDown() 
+    public void OnPointerDown()
     {
         onDropInteractObject = null;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (onInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
+            if (onInteractObject == null)
             {
-                onInteractObject.OnInteract();
+                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
+            }
+            else
+            {
+                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
         }
     }
@@ -48,20 +48,11 @@ public class PlayerController : ControllerBaseModel
         {
             if (onInteractObject == null)
             {
-                if (onInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
-                {
-                    onInteractObject.OnInteract();
-                }
+                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
             else
             {
-                if (onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>())
-                {
-                    if (onInteractObject != onDropInteractObject)
-                    {
-                        onDropInteractObject.OnInteract();
-                    }
-                }
+                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
         }
     }
@@ -70,9 +61,8 @@ public class PlayerController : ControllerBaseModel
     {
         if (onInteractObject != null && onDropInteractObject != null)
         {
-            if (interactableController.CheckCondition(onInteractObject, onDropInteractObject, activeLevel, stage))
+            if (interactableController.CheckCondition(onInteractObject, onDropInteractObject))
             {
-                stage++;
                 onInteractObject = null;
                 onDropInteractObject = null;
             }

@@ -5,8 +5,22 @@ using Cinemachine;
 
 public class CameraController : ControllerBaseModel
 {
-    [SerializeField] CinemachineVirtualCamera[] virtualCameras;
+    public static CameraController Controller;
+    [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
     public CinemachineVirtualCamera ActiveCamera;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        if (Controller != null)
+        {
+            Destroy(Controller);
+        }
+        else
+        {
+            Controller = this;
+        }
+    }
 
     public void ChangeCamera(int index)
     {

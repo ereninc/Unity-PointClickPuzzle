@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2338328582107673272}
+  - component: {fileID: 3767087100656178272}
   m_Layer: 0
-  m_Name: Model
+  m_Name: VisualModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,10 +27,25 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4292274238932538121}
   m_Father: {fileID: 2338328582517818797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3767087100656178272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338328582107673273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b1454671316b440860186c78e8ac1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidMesh: {fileID: 5777050546545429155}
+  splashParticle: {fileID: 5466326617037463628}
 --- !u!1 &2338328582517818794
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +57,6 @@ GameObject:
   - component: {fileID: 2338328582517818797}
   - component: {fileID: 2338328582517818796}
   - component: {fileID: 2338328582517818799}
-  - component: {fileID: 5953524692322279932}
   m_Layer: 0
   m_Name: CupModel
   m_TagString: Untagged
@@ -56,16 +71,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2338328582517818794}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000014603138}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 1.068, y: 0.89829993, z: 0.11100006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2338328582107673272}
-  - {fileID: 4292274238932538121}
   - {fileID: 5466326617056779822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &2338328582517818796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,21 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableType: 0
-  cupVisualModel: {fileID: 5953524692322279932}
---- !u!114 &5953524692322279932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2338328582517818794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95b1454671316b440860186c78e8ac1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  liquidMesh: {fileID: 5777050546545429155}
-  splashParticle: {fileID: 5466326617037463628}
+  cupVisualModel: {fileID: 3767087100656178272}
 --- !u!1 &3520381151087823283
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,14 +130,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3520381151087823283}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.0361, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.03610003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3830838025706502545}
   - {fileID: 232109167031874017}
-  m_Father: {fileID: 2338328582517818797}
-  m_RootOrder: 1
+  m_Father: {fileID: 2338328582107673272}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4898690910162205596
 GameObject:
@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
       propertyPath: m_LocalPosition.x

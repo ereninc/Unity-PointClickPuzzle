@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlackboardModel : InteractableBaseModel
 {
-    [SerializeField] private BlackboardVisualModel blackboardVisual;
+    [SerializeField] private EventModel blackboardInteractEventModel;
 
     public override void Initialize()
     {
@@ -15,11 +15,6 @@ public class BlackboardModel : InteractableBaseModel
     public override void OnInteract()
     {
         base.OnInteract();
-    }
-
-    public override void OnClickEnd()
-    {
-        blackboardVisual.OnBlackboardClick();
-        base.OnClickEnd();
+        blackboardInteractEventModel?.Invoke();
     }
 }

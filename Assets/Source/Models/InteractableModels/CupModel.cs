@@ -16,14 +16,9 @@ public class CupModel : InteractableBaseModel
 
     public override void OnInteract()
     {
-        base.OnInteract();
-    }
-
-    public override void OnClickEnd()
-    {
         setEvent();
         interactIndex++;
-        base.OnClickEnd();
+        base.OnInteract();
     }
 
     private void setEvent()

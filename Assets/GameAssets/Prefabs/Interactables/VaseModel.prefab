@@ -172,8 +172,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5858353110851218642}
   - component: {fileID: 8231298412492807321}
+  - component: {fileID: 172246331663660928}
   m_Layer: 0
-  m_Name: Model
+  m_Name: VisualModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,6 +214,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &172246331663660928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858353110851218643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9ba1e645dc3044816a26295ec34b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8231298412492807321}
+  sparkleParticle: {fileID: 3814236707768765264}
 --- !u!1 &5858353111575847452
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +239,6 @@ GameObject:
   - component: {fileID: 5858353111575847451}
   - component: {fileID: 5858353111575847450}
   - component: {fileID: 5858353111575847449}
-  - component: {fileID: 2562630050213081074}
   m_Layer: 0
   m_Name: VaseModel
   m_TagString: Untagged
@@ -274,21 +288,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableType: 0
-  vaseVisualModel: {fileID: 2562630050213081074}
---- !u!114 &2562630050213081074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5858353111575847452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df9ba1e645dc3044816a26295ec34b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8231298412492807321}
-  sparkleParticle: {fileID: 3814236707768765264}
+  vaseInteractEventModel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 172246331663660928}
+        m_TargetAssemblyTypeName: VaseVisualModel, Assembly-CSharp
+        m_MethodName: OnWatered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9112979288729909867
 GameObject:
   m_ObjectHideFlags: 0

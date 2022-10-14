@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VaseModel : InteractableBaseModel
 {
-    [SerializeField] private VaseVisualModel vaseVisualModel;
+    [SerializeField] private EventModel vaseInteractEventModel;
 
     public override void Initialize()
     {
@@ -14,12 +14,7 @@ public class VaseModel : InteractableBaseModel
 
     public override void OnInteract()
     {
+        vaseInteractEventModel?.Invoke();
         base.OnInteract();
-    }
-
-    public override void OnClickEnd()
-    {
-        vaseVisualModel.OnWatered();
-        base.OnClickEnd();
     }
 }

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1125993355466523240}
   - component: {fileID: 3435884878127895191}
+  - component: {fileID: 8053620922957303716}
   m_Layer: 0
-  m_Name: Model
+  m_Name: VisualModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +52,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8053620922957303716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125993355466523243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb557b297b15c294791dcd1f6351525a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3435884878127895191}
+  paperBlastParticle: {fileID: 6747763339100698106}
 --- !u!1 &1125993356088861834
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +77,6 @@ GameObject:
   - component: {fileID: 1125993356088861835}
   - component: {fileID: 1125993356088861832}
   - component: {fileID: 1125993356088861833}
-  - component: {fileID: 8728093089675704037}
   m_Layer: 0
   m_Name: TrashbinModel
   m_TagString: Untagged
@@ -112,21 +126,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableType: 0
-  trashbinVisualModel: {fileID: 8728093089675704037}
---- !u!114 &8728093089675704037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125993356088861834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb557b297b15c294791dcd1f6351525a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3435884878127895191}
-  paperBlastParticle: {fileID: 6747763339100698106}
+  trashBinInteractEventModel:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8053620922957303716}
+        m_TargetAssemblyTypeName: TrashbinVisualModel, Assembly-CSharp
+        m_MethodName: OnTrash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6556156137121752453
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,15 +11,7 @@ public class InteractableBaseModel : ObjectModel, IInteractable
         Interact();
     }
 
-    public virtual void OnClickEnd() 
-    {
-
-    }
-
-    public void Interact()
-    {
-
-    }
+    public void Interact() { }
 
     public void OnSpawn(InteractableTypes type)
     {

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53403452db7148a4c948c330b14eca89, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
+  StageCount: 4
   LevelDatas:
   - PointObject: 0
     ClickObject: 1
