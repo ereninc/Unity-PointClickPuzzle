@@ -17,7 +17,7 @@ public class PenModel : InteractableBaseModel
 
     public override void OnClickEnd()
     {
+
         base.OnClickEnd();
-        Debug.Log("PEN PAINTED");
     }
 }

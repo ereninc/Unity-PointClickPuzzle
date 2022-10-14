@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrashbinModel : InteractableBaseModel
 {
+    [SerializeField] private TrashbinVisualModel trashbinVisualModel;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -17,7 +19,7 @@ public class TrashbinModel : InteractableBaseModel
 
     public override void OnClickEnd()
     {
+        trashbinVisualModel.OnTrash();
         base.OnClickEnd();
-        Debug.Log("THRASHBIN EVENT");
     }
 }

@@ -17,7 +17,7 @@ public class DrinkerModel : InteractableBaseModel
 
     public override void OnClickEnd()
     {
+
         base.OnClickEnd();
-        Debug.Log("DRINKER aaaaa");
     }
 }

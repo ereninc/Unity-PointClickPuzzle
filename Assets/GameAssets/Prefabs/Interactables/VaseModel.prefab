@@ -171,6 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5858353110851218642}
+  - component: {fileID: 8231298412492807321}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -193,6 +194,25 @@ Transform:
   m_Father: {fileID: 5858353111575847451}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8231298412492807321
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858353110851218643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6faba51080da2104dbcd38c571cf8a5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5858353111575847452
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +224,7 @@ GameObject:
   - component: {fileID: 5858353111575847451}
   - component: {fileID: 5858353111575847450}
   - component: {fileID: 5858353111575847449}
+  - component: {fileID: 2562630050213081074}
   m_Layer: 0
   m_Name: VaseModel
   m_TagString: Untagged
@@ -223,6 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5858353110851218642}
+  - {fileID: 3900599171671475898}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -252,6 +274,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractableType: 0
+  vaseVisualModel: {fileID: 2562630050213081074}
+--- !u!114 &2562630050213081074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858353111575847452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9ba1e645dc3044816a26295ec34b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8231298412492807321}
+  sparkleParticle: {fileID: 3814236707768765264}
 --- !u!1 &9112979288729909867
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,3 +321,86 @@ Transform:
   m_Father: {fileID: 5858353110851218642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 113.388, z: 0}
+--- !u!1001 &3904607856297480316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5858353111575847451}
+    m_Modifications:
+    - target: {fileID: 1059839741644488, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_Name
+      value: VaseSparkle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198215757090913196, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198457707695414060, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199182511806970400, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199485060462282836, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+--- !u!4 &3900599171671475898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4013696924178118, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+  m_PrefabInstance: {fileID: 3904607856297480316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3814236707768765264 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198457707695414060, guid: a50ee668034979e49a7fc0e0cdce7c95, type: 3}
+  m_PrefabInstance: {fileID: 3904607856297480316}
+  m_PrefabAsset: {fileID: 0}

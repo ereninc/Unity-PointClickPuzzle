@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CupVisualModel : ObjectModel
 {
     [SerializeField] private SkinnedMeshRenderer liquidMesh;
+    [SerializeField] private ParticleSystem splashParticle;
     private float liquidHeightVal = 0;
 
     public void OnCupClick(bool isFilling)
@@ -16,6 +17,7 @@ public class CupVisualModel : ObjectModel
             .OnUpdate(() => {
                 liquidMesh.SetBlendShapeWeight(1, liquidHeightVal);
             });
+            splashParticle.Play();
         }
         else
         {
@@ -23,6 +25,7 @@ public class CupVisualModel : ObjectModel
             .OnUpdate(() => {
                 liquidMesh.SetBlendShapeWeight(1, liquidHeightVal);
             });
+            splashParticle.Play();
         }
     }
 }
