@@ -75,7 +75,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4432089479562436072}
-  m_LocalRotation: {x: -0, y: -0.719098, z: -0, w: 0.6949088}
+  m_LocalRotation: {x: 0, y: -0.7190972, z: 0, w: 0.69490945}
   m_LocalPosition: {x: -2.066, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -83,7 +83,7 @@ Transform:
   - {fileID: 4432089480233247177}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -91.96, z: 0}
 --- !u!114 &4432089479562436078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +185,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4432089479562436079}
     m_Modifications:
+    - target: {fileID: 7968723476794872836, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.168192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968723476794872836, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.168192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968723476794872836, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968723476794872836, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 7968723476794872839, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -223,11 +239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968723477499438491, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968723477499438491, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968723477499438491, guid: be0ce132c4df707449fda73aafdc4f62, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrinkerModel : InteractableBaseModel
 {
-    [SerializeField] private DrinkerVisualModel drin;
+    [SerializeField] private DrinkerVisualModel drinkerMachineVisualModel;
 
     public override void Initialize()
     {
@@ -15,6 +15,6 @@ public class DrinkerModel : InteractableBaseModel
     public override void OnInteract()
     {
         base.OnInteract();
-        drin.OnTakeWater();
+        drinkerMachineVisualModel.OnTakeWater();
     }
 }

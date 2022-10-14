@@ -73,5 +73,3 @@ public class GameController : ControllerBaseModel
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
-
-

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PenModel : InteractableBaseModel
 {
+    [SerializeField] private EventModel onDrawEvent;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -13,5 +15,6 @@ public class PenModel : InteractableBaseModel
     public override void OnInteract()
     {
         base.OnInteract();
+        onDrawEvent?.Invoke();
     }
 }

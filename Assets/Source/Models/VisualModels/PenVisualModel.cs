@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorModel : ObjectModel
+public class PenVisualModel : ObjectModel
 {
     [SerializeField] private Animator animator;
 
-    public void OnOpen() 
+    public void OnDraw()
     {
-        animator.Play("OnOpen", 0, 0);
+        animator.Play("OnDraw", 0, 0);
     }
 }

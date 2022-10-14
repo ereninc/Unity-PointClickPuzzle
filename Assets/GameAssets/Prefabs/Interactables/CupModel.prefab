@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2338328582107673272}
   - component: {fileID: 3767087100656178272}
   - component: {fileID: 9061482983288327508}
+  - component: {fileID: 6269381114765518838}
   m_Layer: 0
   m_Name: VisualModel
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   liquidMesh: {fileID: 5777050546545429155}
   splashParticle: {fileID: 5466326617037463628}
+  animator: {fileID: 6269381114765518838}
 --- !u!114 &9061482983288327508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +122,25 @@ MonoBehaviour:
     fillPass:
       shader: {fileID: 0}
       serializedProperties: []
+--- !u!95 &6269381114765518838
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338328582107673273}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea2c4acc6dbce3a4b9c4e6369225836f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2338328582517818794
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 3520381151087823283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.03610003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 3830838025706502545}
   - {fileID: 232109167031874017}
@@ -419,6 +440,18 @@ PrefabInstance:
     - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 410056, guid: cc293dd815f539b449a109688b4dd9b8, type: 3}
       propertyPath: m_LocalPosition.x

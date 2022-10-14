@@ -6,7 +6,7 @@ public class PlayerController : ControllerBaseModel
 {
     [SerializeField] private PointerController pointerController;
     [SerializeField] private InteractableController interactableController;
-    public InteractableBaseModel onInteractObject, onDropInteractObject;
+    private InteractableBaseModel onInteractObject, onDropInteractObject;
     private RaycastHit hit;
     private Ray ray;
 

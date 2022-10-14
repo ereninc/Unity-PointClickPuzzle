@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BlackboardVisualModel : ObjectModel
+public class BlackboardVisualModel : VisualBaseModel
 {
     [SerializeField] private Transform blackBoardGFX;
     [SerializeField] private Transform chartParent;

@@ -391,7 +391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 120638962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 137382914}
+        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &120638962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +561,7 @@ GameObject:
   - component: {fileID: 137382916}
   - component: {fileID: 137382915}
   - component: {fileID: 137382914}
+  - component: {fileID: 137382918}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -633,6 +646,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137382912}
   m_CullTransparentMesh: 1
+--- !u!114 &137382918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137382912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3663bf9b30cc36d4482d654fdec5c106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrig:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1626362717}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: ReloadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &150076188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1198,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEVEL 42
+  m_Text: LEVEL 58
 --- !u!222 &472885711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1810,7 +1850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &871221312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2296,7 +2336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 584.59, y: 109.61}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1135061321
@@ -2325,14 +2365,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 60
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SWIPE TO PLAY
+  m_Text: TAP TO PLAY
 --- !u!222 &1135061322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2354,7 +2394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!114 &1135061324
 MonoBehaviour:
@@ -2369,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1147331567
 GameObject:
@@ -3611,8 +3651,6 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   interactableController: {fileID: 1823962291}
-  onInteractObject: {fileID: 0}
-  onDropInteractObject: {fileID: 0}
 --- !u!1 &1626362716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,7 +3994,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684089350}
-  m_LocalRotation: {x: -0.049059115, y: 0.9466003, z: -0.17392923, w: -0.2670015}
+  m_LocalRotation: {x: -0.049059108, y: 0.94660026, z: -0.17392924, w: -0.26700145}
   m_LocalPosition: {x: 7.54, y: 5.98, z: 15.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4738,7 +4776,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124040333}
-  m_LocalRotation: {x: -0.049059115, y: 0.9466003, z: -0.17392923, w: -0.2670015}
+  m_LocalRotation: {x: -0.049059108, y: 0.94660026, z: -0.17392924, w: -0.26700145}
   m_LocalPosition: {x: 7.54, y: 5.98, z: 15.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4912,6 +4950,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444962729241804517, guid: 95cf2d97e8bbe6442bf50c83534b7660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843182994075071039, guid: 95cf2d97e8bbe6442bf50c83534b7660, type: 3}
+      propertyPath: outlineTargets.Array.data[0].IsVisible
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843182994075071039, guid: 95cf2d97e8bbe6442bf50c83534b7660, type: 3}
+      propertyPath: outlineTargets.Array.data[1].IsVisible
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5237,6 +5283,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125993356088861835, guid: 351387b243702474abc7dcb93e34c229, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071985639810421184, guid: 351387b243702474abc7dcb93e34c229, type: 3}
+      propertyPath: outlineTargets.Array.data[0].IsVisible
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5748,6 +5798,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2338328582517818797, guid: 990d75fa294c3104a8d3324a1c1af3dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061482983288327508, guid: 990d75fa294c3104a8d3324a1c1af3dd, type: 3}
+      propertyPath: outlineTargets.Array.data[0].IsVisible
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061482983288327508, guid: 990d75fa294c3104a8d3324a1c1af3dd, type: 3}
+      propertyPath: outlineTargets.Array.data[1].IsVisible
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

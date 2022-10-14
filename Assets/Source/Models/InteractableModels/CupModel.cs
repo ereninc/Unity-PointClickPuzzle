@@ -32,7 +32,7 @@ public class CupModel : InteractableBaseModel
                 cupVisualModel.OnCupClick(false);
                 break;
             case 2:
-                this.SetActiveGameObject(false);
+                cupVisualModel.OnEnterTrashBin();
                 break;
             default:
                 break;

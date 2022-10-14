@@ -7,11 +7,6 @@ public class FinishController : ControllerBaseModel
     [SerializeField] private DoorModel doorModel;
     [SerializeField] private CharacterModel characterModel;
 
-    public void OnStagesFinished() 
-    {
-
-    }
-
     public void OnLevelFinished() 
     {
         doorModel.OnOpen();

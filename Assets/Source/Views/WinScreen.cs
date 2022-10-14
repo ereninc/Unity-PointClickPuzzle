@@ -5,5 +5,8 @@ using UnityEngine.UI;
 
 public class WinScreen : ScreenElement
 {
-
+    public void NextLevel() 
+    {
+        Animator.Play("Outro", 0, 0);
+    }
 }
