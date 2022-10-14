@@ -716,7 +716,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: MOREMOUNTAINS_NICEVIBRATIONS
+    1: MOREMOUNTAINS_NICEVIBRATIONS;URP_OUTLINE;EPO_DOTWEEN
     4: MOREMOUNTAINS_NICEVIBRATIONS;ATT;Adjust;AppsFlyer;FB;GA
     7: MOREMOUNTAINS_NICEVIBRATIONS;URP_OUTLINE;ATT;Adjust;AppsFlyer;FB;GA
   additionalCompilerArguments: {}
