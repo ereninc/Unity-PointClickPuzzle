@@ -7,12 +7,11 @@ public class BlackboardVisualModel : VisualBaseModel
 {
     [SerializeField] private Transform blackBoardGFX;
     [SerializeField] private Transform chartParent;
-    [SerializeField] private ParticleSystem dustParticle;
 
-    public void OnBlackboardClick()
+    public override void OnAction()
     {
         blackBoardGFX.SetActiveGameObject(true);
         chartParent.DOScaleY(1, 2f).SetEase(Ease.InOutElastic).OnComplete(() => DOTween.Kill(this));
-        dustParticle.Play();
+        ParticleSystem.Play();
     }
 }

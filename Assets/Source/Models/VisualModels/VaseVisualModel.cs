@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VaseVisualModel : ObjectModel
+public class VaseVisualModel : VisualBaseModel
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private ParticleSystem sparkleParticle;
-
-    public void OnWatered() 
+    public override void OnAction()
     {
-        animator.Play("OnWatered", 0, 0);
-        sparkleParticle.Play();
+        Animator.Play("OnWatered", 0, 0);
+        ParticleSystem.Play();
     }
 }

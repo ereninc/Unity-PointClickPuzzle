@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df9ba1e645dc3044816a26295ec34b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8231298412492807321}
-  sparkleParticle: {fileID: 3814236707768765264}
+  Animator: {fileID: 8231298412492807321}
+  ParticleSystem: {fileID: 3814236707768765264}
 --- !u!114 &5219472337236743425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 172246331663660928}
         m_TargetAssemblyTypeName: VaseVisualModel, Assembly-CSharp
-        m_MethodName: OnWatered
+        m_MethodName: OnAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -65,8 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801886fd986454d4d8ae220b34a9a72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4993176882781783618}
-  splashParticle: {fileID: 8561464317903275253}
+  Animator: {fileID: 4993176882781783618}
+  ParticleSystem: {fileID: 8561464317903275253}
 --- !u!114 &843182994075071039
 MonoBehaviour:
   m_ObjectHideFlags: 0

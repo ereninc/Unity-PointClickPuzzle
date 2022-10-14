@@ -65,8 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb557b297b15c294791dcd1f6351525a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3435884878127895191}
-  paperBlastParticle: {fileID: 6747763339100698106}
+  Animator: {fileID: 3435884878127895191}
+  ParticleSystem: {fileID: 6747763339100698106}
 --- !u!114 &2071985639810421184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8053620922957303716}
         m_TargetAssemblyTypeName: TrashbinVisualModel, Assembly-CSharp
-        m_MethodName: OnTrash
+        m_MethodName: OnAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

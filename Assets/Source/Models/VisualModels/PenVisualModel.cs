@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PenVisualModel : ObjectModel
+public class PenVisualModel : VisualBaseModel
 {
-    [SerializeField] private Animator animator;
-
-    public void OnDraw()
+    public override void OnAction()
     {
-        animator.Play("OnDraw", 0, 0);
+        Animator.Play("OnDraw", 0, 0);
     }
 }

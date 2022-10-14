@@ -66,7 +66,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9028585879464203480}
         m_TargetAssemblyTypeName: BlackboardVisualModel, Assembly-CSharp
-        m_MethodName: OnBlackboardClick
+        m_MethodName: OnAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -312,9 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02e3a7852b8b9146bdcd3adc0e7a7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 0}
+  ParticleSystem: {fileID: 8887437422484225597}
   blackBoardGFX: {fileID: 4276302200566230371}
   chartParent: {fileID: 4276302200827748077}
-  dustParticle: {fileID: 8887437422484225597}
 --- !u!114 &787750696957046015
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashbinVisualModel : ObjectModel
+public class TrashbinVisualModel : VisualBaseModel
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private ParticleSystem paperBlastParticle;
-
-    public void OnTrash() 
+    public override void OnAction()
     {
-        animator.Play("OnGarbage", 0, 0);
-        paperBlastParticle.Play();
+        Animator.Play("OnGarbage", 0, 0);
+        ParticleSystem.Play();
     }
 }

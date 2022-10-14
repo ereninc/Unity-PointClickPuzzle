@@ -15,6 +15,6 @@ public class DrinkerModel : InteractableBaseModel
     public override void OnInteract()
     {
         base.OnInteract();
-        drinkerMachineVisualModel.OnTakeWater();
+        drinkerMachineVisualModel.OnAction();
     }
 }

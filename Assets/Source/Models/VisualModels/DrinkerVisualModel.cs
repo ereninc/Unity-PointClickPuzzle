@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrinkerVisualModel : ObjectModel
+public class DrinkerVisualModel : VisualBaseModel
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private ParticleSystem splashParticle;
-
-    public void OnTakeWater()
+    public override void OnAction()
     {
-        animator.Play("OnTakeWater", 0, 0);
-        splashParticle.Play();
+        Animator.Play("OnTakeWater", 0, 0);
+        ParticleSystem.Play();
     }
 }

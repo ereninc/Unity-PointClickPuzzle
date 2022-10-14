@@ -6,4 +6,6 @@ public class VisualBaseModel : ObjectModel
 {
     public Animator Animator;
     public ParticleSystem ParticleSystem;
+
+    public virtual void OnAction() { }
 }
