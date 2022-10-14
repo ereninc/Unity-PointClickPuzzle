@@ -4,25 +4,18 @@ using UnityEngine;
 
 public class FinishController : ControllerBaseModel
 {
-    public static FinishController Controller;
     [SerializeField] private DoorModel doorModel;
+    //[SerializeField] private FinishScreen finishScreen;
 
-    public override void Initialize()
+    public void OnStagesFinished() 
     {
-        base.Initialize();
-        if (Controller != null)
-        {
-            Destroy(Controller);
-        }
-        else
-        {
-            Controller = this;
-        }
+
     }
 
-    [EditorButton]
     public void OnLevelFinished() 
     {
         doorModel.OnOpen();
+        GameController.ChangeState(GameStates.Win);
+        CameraController.Controller.ChangeCamera(1);
     }
 }

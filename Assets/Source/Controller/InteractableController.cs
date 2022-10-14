@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableController : ControllerBaseModel
 {
     [SerializeField] private List<InteractableBaseModel> interactables;
+    [SerializeField] private EventModel onLevelFinished;
     private LevelModel activeLevel;
     private int stage;
 
@@ -33,11 +34,7 @@ public class InteractableController : ControllerBaseModel
         stage++;
         if (stage == activeLevel.StageCount)
         {
-            //SET END STATE
-            GameController.ChangeState(GameStates.Win);
-            CameraController.Controller.ChangeCamera(1);
-            FinishController.Controller.OnLevelFinished();
-            Debug.Log("LEVEL FINISHED");
+            onLevelFinished?.Invoke();
         }
     }
 
