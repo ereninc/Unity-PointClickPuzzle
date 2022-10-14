@@ -6,12 +6,12 @@ using DG.Tweening;
 public class BlackboardVisualModel : VisualBaseModel
 {
     [SerializeField] private Transform blackBoardGFX;
-    [SerializeField] private Transform chartParent;
+    [SerializeField] private Transform chartGFXParent;
 
     public override void OnAction()
     {
         blackBoardGFX.SetActiveGameObject(true);
-        chartParent.DOScaleY(1, 2f).SetEase(Ease.InOutElastic).OnComplete(() => DOTween.Kill(this));
+        chartGFXParent.DOScaleY(1, 2f).SetEase(Ease.InOutElastic).OnComplete(() => DOTween.Kill(this));
         ParticleSystem.Play();
     }
 }

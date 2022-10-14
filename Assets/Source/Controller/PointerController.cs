@@ -58,5 +58,4 @@ public class PointerController
         if (OnPointerUpEvent != null)
             OnPointerUpEvent.Invoke();
     }
-   
 }

@@ -16,9 +16,8 @@ public class CupModel : InteractableBaseModel
 
     public override void OnInteract()
     {
-        setEvent();
-        interactIndex++;
         base.OnInteract();
+        setEvent();
     }
 
     private void setEvent()
@@ -37,5 +36,6 @@ public class CupModel : InteractableBaseModel
             default:
                 break;
         }
+        interactIndex++;
     }
 }

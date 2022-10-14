@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageCount: 4
   LevelDatas:
-  - PointObject: 0
-    ClickObject: 1
-  - PointObject: 2
-    ClickObject: 3
-  - PointObject: 2
-    ClickObject: 4
-  - PointObject: 2
-    ClickObject: 5
+  - PointObjectType: 0
+    ClickObjectType: 1
+  - PointObjectType: 2
+    ClickObjectType: 3
+  - PointObjectType: 2
+    ClickObjectType: 4
+  - PointObjectType: 2
+    ClickObjectType: 5

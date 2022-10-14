@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4276302199279717552}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5936619, y: 1.55, z: -1.6667199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -315,7 +315,7 @@ MonoBehaviour:
   Animator: {fileID: 0}
   ParticleSystem: {fileID: 8887437422484225597}
   blackBoardGFX: {fileID: 4276302200566230371}
-  chartParent: {fileID: 4276302200827748077}
+  chartGFXParent: {fileID: 4276302200827748077}
 --- !u!114 &787750696957046015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,15 +528,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369905740528273915, guid: 12da6f895096d594496d328316162414, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.43366194
       objectReference: {fileID: 0}
     - target: {fileID: 4369905740528273915, guid: 12da6f895096d594496d328316162414, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4369905740528273915, guid: 12da6f895096d594496d328316162414, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.375
+      value: 0.8699999
       objectReference: {fileID: 0}
     - target: {fileID: 4369905740528273915, guid: 12da6f895096d594496d328316162414, type: 3}
       propertyPath: m_LocalRotation.w

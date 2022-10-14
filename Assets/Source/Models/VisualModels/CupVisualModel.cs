@@ -13,21 +13,10 @@ public class CupVisualModel : VisualBaseModel
         Animator.Play("OnWaterChange", 0, 0);
         ParticleSystem.Play();
         if (isFilling)
-        {
-            DOTween.To(() => liquidHeightVal, x => liquidHeightVal = x, 100, 0.5f)
-            .OnUpdate(() =>
-            {
-                liquidMesh.SetBlendShapeWeight(1, liquidHeightVal);
-            });
-        }
+            changeBlendShapeValue(100);
         else
-        {
-            DOTween.To(() => liquidHeightVal, x => liquidHeightVal = x, 0, 0.5f)
-            .OnUpdate(() =>
-            {
-                liquidMesh.SetBlendShapeWeight(1, liquidHeightVal);
-            });
-        }
+            changeBlendShapeValue(0);
+        
     }
 
     public void OnEnterTrashBin()
@@ -37,5 +26,14 @@ public class CupVisualModel : VisualBaseModel
         {
             transform.DOScale(0f, 0.25f).OnComplete(() => transform.SetActiveGameObject(false));
         });
+    }
+
+    private void changeBlendShapeValue(int amount) 
+    {
+        DOTween.To(() => liquidHeightVal, x => liquidHeightVal = x, amount, 0.5f)
+            .OnUpdate(() =>
+            {
+                liquidMesh.SetBlendShapeWeight(1, liquidHeightVal);
+            });
     }
 }

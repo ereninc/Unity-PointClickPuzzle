@@ -14,7 +14,7 @@ public class VaseModel : InteractableBaseModel
 
     public override void OnInteract()
     {
-        vaseInteractEventModel?.Invoke();
         base.OnInteract();
+        vaseInteractEventModel?.Invoke();
     }
 }

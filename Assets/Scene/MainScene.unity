@@ -1461,7 +1461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &566891029
 GameObject:
@@ -1572,7 +1572,6 @@ MonoBehaviour:
   Player:
     Level: 0
     LevelIndex: 0
-    Money: 100
 --- !u!4 &589702847
 Transform:
   m_ObjectHideFlags: 0
@@ -2317,7 +2316,7 @@ Transform:
   m_Children:
   - {fileID: 1121562239}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109695697
 GameObject:
@@ -3097,7 +3096,7 @@ Transform:
   - {fileID: 1356414391}
   - {fileID: 689920850}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230282474
 GameObject:
@@ -3476,7 +3475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1482349970
 MonoBehaviour:
@@ -6621,6 +6620,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1409093193}
     m_Modifications:
+    - target: {fileID: 787750696957046015, guid: f2ea7806da927fa49912d7f0faea9c81, type: 3}
+      propertyPath: outlineTargets.Array.data[0].IsVisible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4276302199279717552, guid: f2ea7806da927fa49912d7f0faea9c81, type: 3}
       propertyPath: m_Name
       value: BlackBoardModel

@@ -17,12 +17,12 @@ public class InteractableController : ControllerBaseModel
         setInteractables();
     }
 
-    public bool CheckCondition(InteractableBaseModel point, InteractableBaseModel click) 
+    public bool CheckCondition(InteractableBaseModel pointObject, InteractableBaseModel clickObject) 
     {
-        if (point.InteractableType == activeLevel.LevelDatas[stage].PointObject && click.InteractableType == activeLevel.LevelDatas[stage].ClickObject)
+        if (pointObject.InteractableType == activeLevel.LevelDatas[stage].PointObjectType && clickObject.InteractableType == activeLevel.LevelDatas[stage].ClickObjectType)
         {
-            point.OnInteract();
-            click.OnInteract();
+            pointObject.OnInteract();
+            clickObject.OnInteract();
             checkStageCount();
             return true;
         }

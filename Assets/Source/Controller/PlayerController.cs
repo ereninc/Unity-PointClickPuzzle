@@ -10,11 +10,6 @@ public class PlayerController : ControllerBaseModel
     private RaycastHit hit;
     private Ray ray;
 
-    public override void Initialize()
-    {
-        base.Initialize();
-    }
-
     public override void ControllerUpdate(GameStates currentState)
     {
         base.ControllerUpdate(currentState);
@@ -27,34 +22,12 @@ public class PlayerController : ControllerBaseModel
     public void OnPointerDown()
     {
         onDropInteractObject = null;
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (onInteractObject == null)
-            {
-                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
-            }
-            else
-            {
-                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
-            }
-        }
+        onRaycast();
     }
 
     public void OnPointer()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (onInteractObject == null)
-            {
-                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
-            }
-            else
-            {
-                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
-            }
-        }
+        onRaycast();
     }
 
     public void OnPointerUp()
@@ -65,6 +38,22 @@ public class PlayerController : ControllerBaseModel
             {
                 onInteractObject = null;
                 onDropInteractObject = null;
+            }
+        }
+    }
+
+    private void onRaycast()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (onInteractObject == null)
+            {
+                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
+            }
+            else
+            {
+                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
         }
     }

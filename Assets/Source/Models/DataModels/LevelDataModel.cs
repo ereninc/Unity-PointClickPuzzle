@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class LevelDataModel
 {
-    public InteractableTypes PointObject;
-    public InteractableTypes ClickObject;
+    public InteractableTypes PointObjectType;
+    public InteractableTypes ClickObjectType;
 }

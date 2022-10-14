@@ -20,31 +20,6 @@ public enum GameStates
     Lose
 }
 
-public enum PlayerMoveTypes
-{
-    FollowPath,
-    OnlyForward
-}
-public enum LessonTypes
-{
-    Swipe,
-    TapHold,
-    ClickButton,
-    ClickObject
-}
-public enum Languages
-{
-    eng,
-    chi,
-    kor,
-    jpn,
-    fre,
-    ger,
-    ara,
-    ita,
-    rus,
-    por
-}
 public enum InteractableTypes
 {
     Pen,

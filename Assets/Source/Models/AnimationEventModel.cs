@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class AnimationEventModel : MonoBehaviour
 {
-
     [System.Serializable]
     public class TrigEvent : UnityEvent { }
 
