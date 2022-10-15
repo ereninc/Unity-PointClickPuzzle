@@ -1,4 +1,4 @@
-# ErenInanci-LonghornCase
+README
 
 I've decided to use my empty version of hypercasual template. This template just contains
 UI and GameState(Loading, Main, Game and End) logic. First, i've created an environment. 
