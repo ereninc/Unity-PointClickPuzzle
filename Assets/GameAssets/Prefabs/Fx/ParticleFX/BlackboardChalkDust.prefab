@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4369905740543432957}
   - component: {fileID: 4369905740544387363}
   m_Layer: 0
-  m_Name: BlackboardFX
+  m_Name: BlackboardChalkDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

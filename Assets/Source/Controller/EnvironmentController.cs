@@ -11,11 +11,11 @@ public class EnvironmentController : ControllerBaseModel
         if (gameStates == GameStates.Main)
         {
             base.OnStateChange(gameStates);
-            Invoke(nameof(OnLevelStart), 0.5f);
+            Invoke(nameof(onLevelStart), 0.5f);
         }
     }
 
-    public void OnLevelStart()
+    private void onLevelStart()
     {
         animator.Play("OnShow", 0, 0);
     }

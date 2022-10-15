@@ -6,7 +6,7 @@ public class PlayerController : ControllerBaseModel
 {
     [SerializeField] private PointerController pointerController;
     [SerializeField] private InteractableController interactableController;
-    private InteractableBaseModel onInteractObject, onDropInteractObject;
+    private InteractableBaseModel onPointObject, onClickObject;
     private RaycastHit hit;
     private Ray ray;
 
@@ -21,7 +21,7 @@ public class PlayerController : ControllerBaseModel
 
     public void OnPointerDown()
     {
-        onDropInteractObject = null;
+        onClickObject = null;
         onRaycast();
     }
 
@@ -32,12 +32,12 @@ public class PlayerController : ControllerBaseModel
 
     public void OnPointerUp()
     {
-        if (onInteractObject != null && onDropInteractObject != null)
+        if (onPointObject != null && onClickObject != null)
         {
-            if (interactableController.CheckCondition(onInteractObject, onDropInteractObject))
+            if (interactableController.CheckCondition(onPointObject, onClickObject))
             {
-                onInteractObject = null;
-                onDropInteractObject = null;
+                onPointObject = null;
+                onClickObject = null;
             }
         }
     }
@@ -47,13 +47,13 @@ public class PlayerController : ControllerBaseModel
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (onInteractObject == null)
+            if (onPointObject == null)
             {
-                onInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
+                onPointObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
             else
             {
-                onDropInteractObject = hit.transform.GetComponent<InteractableBaseModel>();
+                onClickObject = hit.transform.GetComponent<InteractableBaseModel>();
             }
         }
     }
