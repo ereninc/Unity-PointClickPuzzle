@@ -1,1 +1,3 @@
-![Screenshot_2](https://user-images.githubusercontent.com/24496846/195956237-3c52c463-c78f-45e6-93fb-b041b63fed8b.jpg)
+Simple implementation of 3D Point & Click Puzzle Mechanic
+
+![Screenshot_6](https://user-images.githubusercontent.com/24496846/210444109-7c8fad12-a5c4-4dea-a06c-f383537aa82e.png)
